@@ -220,12 +220,15 @@
 }
 
 .feynman__link {
+  margin: 0;
+  padding: 0;
   position: absolute;
   right: 48px;
   top: 50%;
   line-height: 51px;
   font-size: 36px;
   font-weight: normal;
+
 }
 
 .kaufman {
@@ -268,9 +271,6 @@
 
 .table_theme_dark {
   margin: 0 auto 90px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   width: 1100px;
   z-index: 1;
 }
@@ -345,6 +345,7 @@
 }
 
 .footer__author {
+  margin: 0;
   padding: 18px 0;
   line-height: 25px;
   font-size: 18px;
@@ -352,12 +353,16 @@
 }
 
 .footer__column-heading {
+  margin: 0;
+  padding: 0;
   line-height: 30px;
   font-size: 18px;
   font-weight: 600;
 }
 
 .footer__column-link {
+  margin: 0;
+  padding: 0;
   text-decoration: none;
   color: white;
   line-height: 30px;
