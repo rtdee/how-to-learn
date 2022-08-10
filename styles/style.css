@@ -17,7 +17,6 @@
 }
 
 .link::after {
-  white-space: pre;
   content: " →";
 }
 
@@ -33,9 +32,12 @@
   /* выше установили ограничения для секции */
 }
 
-.logo_place_header {
+.logo {
   width: 228px;
   height: 32px;
+}
+
+.logo_place_header {
   position: absolute;
   top: 30px;
   left: 64px;
@@ -47,7 +49,7 @@
   padding: 0;
   margin: 0;
   align-self: center;
-  width: 730px;
+  max-width: 730px;
   padding-left: 64px;
   z-index: 2;
   font-size: 102px;
@@ -59,7 +61,7 @@
   padding: 0;
   margin: 0;
   position: absolute;
-  width: 388px;
+  max-width: 388px;
   bottom: 30px;
   left: 64px;
   z-index: 2;
@@ -77,6 +79,8 @@
   bottom: 0;
   right: 0;
   z-index: 1;
+  object-fit: contain;
+  object-position: right bottom;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
@@ -127,6 +131,10 @@
   font-size: 24px;
   font-weight: normal;
   margin: 0 0 30px;
+}
+
+.two-columns__paragraph:last-of-type {
+  margin: 0;
 }
 
 .two-columns__span-accent {
@@ -193,7 +201,7 @@
   flex-direction: column;
   align-items: center;
   position: relative;
-  height: 890px;
+  min-height: 890px;
   background-image: url(../images/feynman.png);
   background-position: bottom left;
   background-repeat: no-repeat;
@@ -202,7 +210,7 @@
 }
 
 .feynman__title {
-  width: 648px;
+  max-width: 648px;
   margin: 0;
   padding: 100px 0 0;
   line-height: 1.15;
@@ -242,6 +250,9 @@
 }
 
 .kaufman__triangle {
+  background-image: url(../images/kaufman-triangle.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   right: -210px;
   z-index: 0;
@@ -252,26 +263,18 @@
 .section-title_theme_dark {
   margin: 90px 0 0;
   width: 60%;
-  line-height: 1.15;
-  font-size: 60px;
-  font-weight: 600;
   z-index: 1;
   text-align: center;
 }
 
 .section-subtitle_theme_dark {
-  margin: 20px 0 0;
   width: 60%;
-  line-height: 34px;
-  font-size: 24px;
-  font-weight: normal;
   z-index: 1;
   text-align: center;
 }
 
 .table_theme_dark {
   margin: 0 auto 90px;
-  width: 1100px;
   z-index: 1;
 }
 
@@ -296,6 +299,7 @@
 }
 
 .footer {
+  box-sizing: border-box;
   min-height: 350px;
   padding: 60px 0 40px;
   display: flex;
@@ -310,7 +314,6 @@
 .footer__columns {
   display: flex;
   justify-content: space-between;
-  margin: 60px 0 40px;
   width: 90%;
 }
 
@@ -340,8 +343,6 @@
 
 .logo_place_footer {
   background-image: url(../images/logo_place_footer.svg);
-  width: 228px;
-  height: 32px;
 }
 
 .footer__author {
